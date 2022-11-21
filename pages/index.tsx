@@ -24,7 +24,7 @@ export default function Home() {
         <Input value={search} onChange={(e) => setSearch(String(e.target.value))} placeholder="enter your query here" />
         <div className="flex justify-center space-x-4">
           <Button colorScheme="gray">
-            I'm Feeling Lucky
+            I&apos;m Feeling Lucky
           </Button>
           <Button colorScheme="blue" type="submit">
             Search

@@ -44,7 +44,7 @@ export default function Search() {
         <div className="grid grid-cols-8 gap-8">
           {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15].map((item) => {
             return (
-              <div className="flex flex-col items-center justify-center space-y-1 group">
+              <div className="flex flex-col items-center justify-center space-y-1 group" key={item}>
                 <div className="overflow-hidden rounded-xl hover:cursor-pointer">
                   <img className="transform transition-all group-hover:scale-[1.10] duration-[400ms] saturate-[0.6] group-hover:saturate-100" src="https://cdn.myanimelist.net/images/anime/1987/117507.jpg" />
                 </div>
