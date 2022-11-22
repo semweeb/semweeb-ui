@@ -1,5 +1,4 @@
 import { Button, Input } from '@chakra-ui/react'
-import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { useState } from 'react'
 
@@ -21,7 +20,7 @@ export default function Home() {
           <h1 className="text-4xl font-bold">[Sem Weeb]™</h1>
           <h2 className="text-2xl ">アニメ Engine</h2>
         </div>
-        <Input value={search} onChange={(e) => setSearch(String(e.target.value))} placeholder="enter your query here" />
+        <Input value={search} onChange={(e) => setSearch(String(e.target.value))} placeholder="enter search query" />
         <div className="flex justify-center space-x-4">
           <Button colorScheme="gray">
             I&apos;m Feeling Lucky
