@@ -31,6 +31,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ search, onChange, placeholder }) 
           {suggestions.map((item: any) => {
             return (
               <div
+                key={item?.id?.value}
                 onClick={() => {
                   router.push("/result?id=" + item?.id?.value)
                   setActive(false)

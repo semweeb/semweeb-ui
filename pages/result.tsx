@@ -27,7 +27,7 @@ export default function Result() {
               </p>
               <p>
                 <span className="font-bold">English: </span>
-                <span>The Ryuo's Work is Never Done!</span>
+                <span>The Ryuo&apos;s Work is Never Done!</span>
               </p>
             </div>
           </div>
