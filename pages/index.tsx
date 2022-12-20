@@ -1,6 +1,7 @@
 import { Button, Input } from '@chakra-ui/react'
 import { useRouter } from 'next/router'
 import { useState } from 'react'
+import SearchBar from '../components/SearchBar'
 
 export default function Home() {
   const router = useRouter()
@@ -17,10 +18,10 @@ export default function Home() {
           <div className="mb-2">
             <img className="object-cover h-40 w-40 rounded-full" src="/dekdekpe.png" />
           </div>
-          <h1 className="text-4xl font-bold">[Sem Weeb]™</h1>
+          <h1 className="text-4xl font-bold">[Sem Weeb]</h1>
           <h2 className="text-2xl ">アニメ Engine</h2>
         </div>
-        <Input value={search} onChange={(e) => setSearch(String(e.target.value))} placeholder="enter search query" />
+        <SearchBar search={search} onChange={(e) => setSearch(String(e.target.value))} placeholder="enter search query" />
         <div className="flex justify-center space-x-4">
           <Button colorScheme="gray">
             I&apos;m Feeling Lucky

@@ -1,6 +1,7 @@
 import React from "react"
 import { Input, Button } from "@chakra-ui/react"
 import { useRouter } from "next/router"
+import SearchBar from "./SearchBar"
 
 export default function Navbar() {
   const router = useRouter()
@@ -33,7 +34,7 @@ export default function Navbar() {
           className="flex space-x-3"
         >
           <div className="md:w-64 lg:w-96">
-            <Input placeholder="enter search query" value={search} onChange={(e) => setSearch(String(e.target.value))} />
+            <SearchBar placeholder="enter search query" search={search} onChange={(e) => setSearch(String(e.target.value))} />
           </div>
           <Button colorScheme="blue" type="submit">Search</Button>
         </form>
