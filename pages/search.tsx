@@ -9,17 +9,19 @@ export default function Search() {
   const router = useRouter()
 
   const [search, setSearch] = useState("")
+  const [genres, setGenres] = useState("")
   const [data, setData] = useState([])
   const [page, setPage] = useState(0)
 
   useEffect(() => {
-    const { q: query } = router.query
+    const { q: query, genres } = router.query
     setSearch(String(query))
+    setGenres(String(genres))
   }, [router.query])
 
   useEffect(() => {
     if (search === "") return
-    fetch(`${process.env.NEXT_PUBLIC_API_URL}/search?q=${search}&page=${page}`)
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/search?q=${search}&page=${page}&genres=${genres}`)
       .then((res) => res.json())
       .then((res) => setData(res))
   }, [search, page])
